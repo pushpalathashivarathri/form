@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+</head>
+<body>
+    <form class="container" id="myForm">
+        <h4>Form Submitted Succssfully.Thank You...!!!</h4>
+        <label for="name-input">Name</label>
+        <input type="name" id="name-input" oninput="validate()" maxlength="5" required>
+        <div id="name-icon"></div>
+        <p id="name-error-msg">name can't be empty</p><br/><br/>
+
+        <label for="email-id">Email Id</label>
+        <input type="email" id="email-id" oninput="checker()" maxlength="20" required>
+        <div id="email-icon"></div>
+        <p id="email-error-msg">please enter a valid mail id</p><br/><br/>
+
+        <label for="rating">Rating:</label>
+    <select name="rating" placeholder="rating" id="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select><br/><br/>
+
+    <label for="suggestions">Suggestions</label>
+    <textarea name="suggestions" placeholder="Suggestions" id="suggestions" oninput="validateSuggestions()" maxlength="10" ></textarea>
+    <div id="sug-icon"></div>
+    <p id="sug-error-msg">Please enter below 10 char. </p><br/><br/>
+
+    <label class="dropdown-group">
+        Country:<select id="Country" size="1">Country
+        <option value="" selected="selected">-- Select Country --</option>
+        </select>
+    
+          State:<select id="State" size="1">State
+            <option value="" selected="selected">-- Select State --</option>
+          </select>
+        </label>
+
+        <br/><br/>
+        <input id="button" type="button" value="submit" style="background-color: gray" />
+
+  </form>
+     
+
+    <script src="scrippt.js"></script> 
+</body>
+</html>
